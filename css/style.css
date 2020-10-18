@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); 
+
+html {
+	box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: montserrat, sans-serif;
+}
+header {
+  margin: 1em 0em;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  text-align: center;
+}
+.logo img {
+  width: 25%;
+}
+.header, .foot{
+  padding: 0.2em 1em;
+}
+
+/* --- HAMBURGER MENU --- */
+.menutoggle a{
+  font-size: 2em;
+  color: #000;
+  text-decoration: none;
+}
+.active {
+  width: 200px;
+  transition: width 0.6s;
+}
+.inactive {
+  width: 0;
+  transition: width 0.6s;
+}
+
+
+/* --- NAVIGATIE --- */
+nav {
+  position: fixed;
+  top: 0px;
+  left: -16px;
+  overflow: hidden;
+  height: 100vh; 
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  margin: 0;
+}
+nav ul {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: flex;
+  padding: 1em;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+}
+nav > ul > li > a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+#menu {
+  background-color: #fff;
+  margin: 1em;
+}
+
+/* --- CONTENT --- */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url('../images/intro.jpg');
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 75px 0px;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  margin: 1em 0em;
+}
+article img {
+  width: 100%;
+}
+article h4 {
+  padding-left: 0.5em;
+}
+article p{
+  line-height: 0.5em;
+  padding-left: 0.5em;
+}
+article p span {
+  color: grey;
+}
+footer {
+  text-align: center;
+}
+footer a{
+  text-decoration: none;
+  color: #000;
+}
+footer h4{
+  text-transform: uppercase;
+  border-top: 1px solid #dcdcdc;
+  padding-top: 2em;
+  font-size: 0.8em;
+}
+footer p {
+  line-height: 2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+
+
+
+@media only screen and (min-width: 768px){
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  .container {
+    padding: 100px 0px;
+  }
+}
+
+
+  @media only screen and (min-width: 1024px){
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .menutoggle {
+      display: none;
+    }
+    .active, .inactive {
+      width: unset;
+    }
+    nav {
+      position: static;
+      height: unset;
+      display: flex;
+      flex-flow: row;
+    }
+    nav ul{
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      padding: 0;
+    }
+    nav ul li {
+      display: flex;
+      padding: 1em;
+      margin: 0;
+      list-style: none;
+      justify-content: center;
+      border: none;
+    }
+    .test {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+
+/* --- FAQ --- */
+.top {
+  padding: 7em 1em;
+  background-image: url('../images/faq.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+.top h2 {
+  text-transform: uppercase;
+  padding-bottom: 2em;
+}
+.top input {
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 1em;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  font-size: 18px;
+  color: #fff;
+}
+.top img {
+  width: 5%;
+  position: absolute;
+  right: 1em;
+}
+.wrapper {
+  padding: 1em 1em;
+}
+.wrapper div {
+  padding: 1em;
+  margin-top: 1em;
+  display: flex;
+  -webkit-box-shadow: 10px 10px 60px -5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 10px 10px 60px -5px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 60px -5px rgba(0,0,0,0.2);
+}
+.wrapper div img {
+  margin-right: 1em;
+  width: 7%;
+}
+.wrapper div p {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px){
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .wrapper div {
+    margin-top: 0em;
+  }
+}
+@media only screen and (min-width: 1024px){
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .top {
+    background-position: top;
+  }
+  .top input {
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 1em;
+    cursor: pointer;
+    width: 70%;
+    background: none;
+    font-size: 18px;
+    color: #fff;
+  }
+  .top img {
+    width: 2%;
+    right: 14em;
+  }
+}
